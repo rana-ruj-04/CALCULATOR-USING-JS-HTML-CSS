@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.calculator {
+    background: #0d1117;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 
+        0 25px 50px -12px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.display {
+    background: #161b22;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.previous-operand {
+    color: #8b949e;
+    font-size: 1rem;
+    min-height: 1.5rem;
+    margin-bottom: 4px;
+    word-break: break-all;
+}
+
+.current-operand {
+    color: #f0f6fc;
+    font-size: 2.5rem;
+    font-weight: 300;
+    word-break: break-all;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.btn {
+    border: none;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    padding: 20px;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn-number {
+    background: #21262d;
+    color: #f0f6fc;
+}
+
+.btn-number:hover {
+    background: #30363d;
+}
+
+.btn-operator {
+    background: #238636;
+    color: white;
+}
+
+.btn-operator:hover {
+    background: #2ea043;
+}
+
+.btn-clear {
+    background: #da3633;
+    color: white;
+}
+
+.btn-clear:hover {
+    background: #f85149;
+}
+
+.btn-equals {
+    background: linear-gradient(135deg, #58a6ff, #1f6feb);
+    color: white;
+    grid-column: span 2;
+}
+
+.btn-equals:hover {
+    background: linear-gradient(135deg, #79b8ff, #388bfd);
+}
+
+.btn-zero {
+    grid-column: span 2;
+}
